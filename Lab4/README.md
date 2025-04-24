@@ -72,13 +72,3 @@ await vault.connect(user).deposit("100"); // User gets tiny shares
 await vault.connect(attacker).deposit("0.000000000000001");
 await vault.connect(attacker).withdraw(...); // Steals user's value
 ```
-
-## 🛠 Recommendations
-
-- Avoid using `takeFeeAsOwner` in production without strict limitations.
-- Prevent tokens from being transferred to vault outside of `deposit()`.
-- Consider using OpenZeppelin’s `ERC4626` standard for vault logic.
-
----
-
-© 2025 DonationVault | Built for education and security research
